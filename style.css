@@ -1,0 +1,100 @@
+* {
+  margin: 0px;
+}
+
+body {
+  background-color: gray;
+  color: white;
+}
+
+.volta {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.5s;
+}
+.volta img {
+  width: 40px;
+  height: 40px;
+}
+
+.volta:hover {
+  scale: 1.1;
+}
+
+header {
+  background-color: darkslategray;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header form input {
+  margin: 10px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+header form input:nth-child(1) {
+  width: 40vw;
+  text-align: center;
+}
+header form input:nth-child(1):focus {
+  outline: none;
+}
+header form input:nth-child(2) {
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+header form input:nth-child(2):hover {
+  background-color: gray;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+main div {
+  width: 250px;
+  height: 170px;
+  margin: 20px;
+  cursor: pointer;
+}
+main div img {
+  border-radius: 20px;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  transition: all 0.5s;
+}
+main div p {
+  margin-top: 20px;
+  margin-left: 5px;
+  transition: all 0.5s;
+  background-color: darkslategray;
+  border-radius: 20px;
+  padding: 10px;
+}
+main div:hover img {
+  scale: 1.1;
+}
+main div:hover p {
+  margin-top: 175px;
+}
+/* # sourceMappingURL=style.css.map */
