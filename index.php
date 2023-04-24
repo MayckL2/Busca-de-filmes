@@ -8,31 +8,10 @@
   <title>Busca de Filmes</title>
   <link rel="icon" href="img/pop-corn.png">
   <link rel="stylesheet" href="style.css">
-  <style>
-    header {
-      /* background-color: green; */
-      background-image: url(img/backgrounds-Shrek-1893571-wallhere.com.jpg);
-      background-size: cover;
-      background-position: 0px -250px;
-      height: 30vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    main {
-      height: 100vh;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
-    }
-  </style>
 
 </head>
 
 <body>
-
   <a href="index.php" class="volta">
     <img src="img/left-arrow.png" alt="">
   </a>
@@ -50,7 +29,7 @@
     <img src="img/left-arrow.png" alt="">
   </a>
 
-  <header>
+  <header id="top">
     <form action="busca.php" method="post">
       <input type="text" name="busca" placeholder="Pesquise um filme aqui">
       <input type="submit">
@@ -61,8 +40,7 @@
     <?php
     include "conexao.php";
 
-    $busca = $_POST['busca'];
-    $sql = "select * from filmes where nome like '%$busca%'";
+    $sql = "select * from filmes";
     $res = mysqli_query($con, $sql);
 
     //acessa coluna pelo nome
@@ -71,7 +49,6 @@
       $nome = $vreg['nome'];
       $sinopse = $vreg['sinopse'];
       $classif = $vreg['classificacao'];
-      $bk = $m = null;
       if ($classif == 0) {
         $bk = "green";
         $m = "Livre";
@@ -104,6 +81,7 @@
     }
 
     $con->close();
+
     ?>
   </main>
 
@@ -112,6 +90,7 @@
       FEITO POR <a href="https://github.com/MayckL2">MAYCK LUCIANO</a>
     </p>
   </footer>
+
 </body>
 
 </html>
